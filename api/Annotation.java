@@ -1,0 +1,18 @@
+package nuclear.module.api;
+
+import nuclear.module.TypeList;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(value = RetentionPolicy.RUNTIME)
+public @interface Annotation {
+
+    String name();
+
+    String desc() default "";
+
+    int key() default 0;
+
+    TypeList type();
+}
